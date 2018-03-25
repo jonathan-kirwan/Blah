@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/screen.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap-4.0.0/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>s
+    <nav class="primary-menu navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" data-target="#navbarSupportedContent" type="button" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarSupportedContent" class="offscreen">
+            <ol class="flex-column flex-lg-row justify-content-end nav">
+                <li class="nav-item border-bottom">
+                    <a class="nav-link text-capitalize" href="">gifts</a>
+                </li>
+                <li class="nav-item border-bottom">
+                    <a class="nav-link text-capitalize has-dropdown" href="" aria-haspopup="true" aria-expanded="false">weddings ^</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item border-bottom" href="#">Action</a>
+                        <a class="dropdown-item border-bottom" href="#">Another action</a>
+                        <a class="dropdown-item border-bottom" href="#">Something else here</a>
+                        <a class="dropdown-item border-bottom" href="#">Separated link</a>
+                    </div>
+                </li>
+                <li class="nav-item border-bottom">
+                    <a class="nav-link text-capitalize" href="">gifts that matter</a>
+                </li>
+                <li class="nav-item border-bottom">
+                    <a class="nav-link text-capitalize" href="">tat</a>
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+
+
+
+    <nav class="d-none navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="flex-column flex-lg-row my-tabs nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Active</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="d-none nav">
+        <ol>
+            <li class="nav-link">item</li>
+            <li class="nav-link nav-has-dropdown">item
+                <ol class="sub-menu">
+                    <li>item 1</li>
+                    <li>item 2</li>
+                </ol>
+            </li>
+            <li class="nav-link">item</li>
+            <li class="nav-link">item</li>
+            <li class="nav-link nav-has-dropdown">item
+                <ol class="sub-menu">
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                    <li>item 4</li>
+                </ol>
+            </li>
+            <li class="nav-link">item</li>
+            <li class="nav-link">item</li>
+            <li class="nav-link">item</li>
+            <li class="nav-link nav-has-dropdown">item
+                <ol class="sub-menu">
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                </ol>
+            </li>
+            <li class="nav-link">item</li>
+        </ol>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+<script src="js/util.js"></script>
+<script src="js/collapse.js"></script>
+<!-- <script src="js/dropdown.js"></script> -->
+
+<script>
+    // $('#my-tabs a').on('click', function (e) {
+    //     e.preventDefault()
+    //     $(this).tab('show')
+    // })
+    // let btn = document.querySelector('.navbar-toggler');
+    // let btns = [...document.querySelectorAll('.has-dropdown')];
+
+    // typeof btns;
+
+    // console.log(typeof btns);
+    // btn.addEventListener('click', expandMenu, false);
+
+    // btns.forEach(function (btn) {
+    //     addEventListener('click', showDropDown, false);
+    // });
+
+    // function showDropDown(e, btn) {
+    //     console.log(btn);
+    //     let _this = this;
+    //     e.preventDefault();
+    //     console.log(this);
+    //     console.log(_this);
+    //     console.log(this.nextSibling);
+    //     console.log(this.nextElementSibling);
+    // }
+
+    // function expandMenu(e) {
+    //     e.preventDefault();
+    //     console.log(this);
+    //     this.setAttribute('aria-expanded', true);
+    //     sideMenu = document.querySelector('.offscreen');
+    //     //sideMenu.classList.add('show');
+    //     sideMenu.classList.toggle('show');
+    //     console.log(sideMenu.classList);
+    // }
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // Get all "navbar-toggler" elements and add to array
+        let navbarMenus = [...document.querySelectorAll('.navbar-toggler')];
+
+        // Check if there are any navbar menu
+        if (!navbarMenus.length > 0) return false
+        {
+
+            // Add a click event on each menu
+            navbarMenus.forEach(function (el) {
+                el.addEventListener('click', function () {
+                    // Get the target from the "data-target" attribute
+                    let targetMenu = el.dataset.target;
+                    let target = document.querySelector(targetMenu);
+
+                    // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    target.classList.toggle('show');
+                });
+            });
+        }
+
+    });
+</script>
+
+</html>
