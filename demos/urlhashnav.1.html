@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- head -->
+    <meta charset="utf-8">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Url Hash Navigation usage demo">
+    <meta name="author" content="David Deutsch">
+    <title> Url Hash Navigation Demo | Owl Carousel | 2.3.3 </title>
+    <!-- Stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/css/docs.theme.min.css">
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="../assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-grid.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Yeah i know js should not be in header. Its required for demos.-->
+    <!-- javascript -->
+    <script src="../assets/vendors/jquery.min.js"></script>
+    <script src="../assets/owlcarousel/owl.carousel.js"></script>
+</head>
+
+<body>
+    <!--  Demos -->
+    <section id="demos">
+        <div class="container">
+            <div class="">
+                <div class="offset-sm-1 col-sm-10">
+                    <div class="">
+                        <div class="owl-carousel owl-carousel-main owl-theme">
+                            <div data-hash="zero"> <img src="mink-mingle-472364-unsplash.jpg" alt=""> </div>
+                            <div data-hash="one"> <img src="mai-rodriguez-561083-unsplash.jpg" alt=""> </div>
+                            <div data-hash="two"> <img src="larm-rmah-273854-unsplash.jpg" alt=""> </div>
+                            <div data-hash="three"> <img src="julie-laiymani-364842-unsplash.jpg" alt=""> </div>
+                            <div data-hash="four"> <img src="henry-be-99471-unsplash.jpg" alt=""> </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="owl-carousel owl-carousel-nav owl-theme d-none d-md-block">
+                            <div> <a href="#zero">
+									<img src="mink-mingle-472364-unsplash.jpg" alt="">
+								</a> </div>
+                            <div> <a href="#one">
+									<img src="mai-rodriguez-561083-unsplash.jpg" alt="">
+								</a> </div>
+                            <div> <a href="#two">
+									<img src="larm-rmah-273854-unsplash.jpg" alt="">
+								</a> </div>
+                            <div> <a href="#three">
+									<img src="julie-laiymani-364842-unsplash.jpg" alt="">
+								</a> </div>
+                            <div> <a href="#four">
+									<img src="henry-be-99471-unsplash.jpg" alt="">
+								</a> </div>
+                        </div>
+                        <script>
+                            $(document).ready(function() {
+                                $('.owl-carousel-main').owlCarousel({
+                                    items: 1,
+                                    rewind: true,
+                                    center: true,
+                                    responsive: {
+                                        0: {
+                                            dots: true,
+                                            margin: 0,
+                                        },
+                                        768: {
+                                            dots: false,
+                                            margin: 10
+                                        }
+                                    }
+                                });
+                                $('.owl-carousel-nav').owlCarousel({
+                                    items: 4,
+                                    rewind: true,
+                                    dots: false,
+                                    margin: 10,
+                                    URLhashListener: true
+                                });
+                                if ($(window).width() < 768) {
+                                    $('.owl-carousel-nav').addClass('d-none').trigger('destroy.owl.carousel');
+                                }
+                                $(window).resize(function() {
+                                    if ($(window).width() < 768) {
+                                        if ($('.owl-carousel').hasClass('d-none')) {
+                                            $('.owl-carousel-nav').owlCarousel({
+                                                items: 4,
+                                                rewind: true,
+                                                dots: false,
+                                                margin: 10,
+                                                URLhashListener: true
+                                            });
+                                            owl.removeClass('d-none');
+                                        }
+                                    } else {
+                                        if (!$('.owl-carousel').hasClass('d-none')) {
+                                            $('.owl-carousel-nav').addClass('d-none').trigger('destroy.owl.carousel');
+                                        }
+                                    }
+                                });
+                            })
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- vendors -->
+    <script src="../assets/vendors/highlight.js"></script>
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>
